@@ -16,17 +16,17 @@ const exec = require('child_process').exec;
 
 // https server setting
 const PORT = '8888'; 
-const HOST='example.net';
+const HOST='example.net'; // Repository Name and Site Name
 const pemPath='/etc/letsencrypt/live/'+HOST;// path of letsencript pem 
 const CERT = fs.readFileSync(pemPath+'/fullchain.pem');
 const KEY = fs.readFileSync(pemPath+'/privkey.pem');
 
 // config のSECRETは git webhookへもセットする
-const conf=require(__dirname+'/conf');
-const SECRET = conf[HOST].secret;
+const conf=require(__dirname+'/conf'); // conf 読込み
+const SECRET = conf[HOST].secret; // シークレット
 
 // git settings
-const BRANCHName='dev-2f';// 'master'|'dev-2f'
+const BRANCHName='dev-2f';// 'master'|'dev-2f' Branch Name
 const targetBRANCH = 'refs/heads/'+BRANCHName;//'refs/heads/master'|'refs/heads/dev-2f'
 const targetRepositoryDir='/home/tato/'+HOST;
 const pullStr='sudo git pull origin '+BRANCHName;
