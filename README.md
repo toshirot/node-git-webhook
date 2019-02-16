@@ -55,10 +55,10 @@ dev-2f
 6) github > settings > WebHook の Active
 ```
     ✔️Active
-    
+```
+
 #### 対象デプロイサーバー側の設定
 
-```
 1) ssh-keygenで秘密鍵、公開鍵を作る
 ```
     sudo ssh-keygen -t rsa -b 4096 -C "Your@e-mail"  -f /root/.ssh/id_rsa_github_example.net
