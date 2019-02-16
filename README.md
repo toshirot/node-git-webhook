@@ -89,7 +89,7 @@ sslの鍵にroot権限が必要なので sudo で動かしています。
 sudo pm2 start /pathTo/git-hook.js
 ```
 
-pm2 や node を root で動かすには　(Ubuntu で NVMを使うケース)
+#### 参考：pm2 や node を root で動かすには　(Ubuntu で NVMを使うケース)
 ```
 //////////////////////////////////////////////
 nvmでnode.jsインストール
