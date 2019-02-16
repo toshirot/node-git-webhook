@@ -5,9 +5,10 @@ github リポジトリへのpushなどだけでサーバー側に自動デプロ
 これは、例えば example.netというレポジトリのdev-2fブランチへのpushをすると
 サーバー側の /pathTo/example.net 以下の内容を git からpull して更新する。
 
+## 設置例
 ```
     pathTo/
-      ├── server
+      ├── git-hook.js
       └── conf.js
 ```
 ## 設定手順例
@@ -78,4 +79,56 @@ github リポジトリへのpushなどだけでサーバー側に自動デプロ
     IdentityFile   /root/.ssh/id_rsa_github_example.net
     User            root
     IdentitiesOnly yes
+```
+## 起動とデーモン
+
+pm2やforeverなどでgit-hook.jsを起動します。
+sslの鍵にroot権限が必要なので sudo で動かしています。
+
+```
+sudo pm2 start /pathTo/git-hook.js
+```
+
+pm2 や node を root で動かすには　(Ubuntu で NVMを使うケース)
+```
+//////////////////////////////////////////////
+nvmでnode.jsインストール
+
+sudo apt install git-core
+git clone git://github.com/creationix/nvm.git ~/nvm
+
+. ~/nvm/nvm.sh
+echo ". ~/nvm/nvm.sh" >> ~/.bashrc
+
+//////////////////////////////////////////////
+node.jsインストール 
+
+ここではv10の最新を入れる
+
+$ nvm install v10
+//////////////////////////////////////////////
+pm2 インストール 
+
+npm install pm2 -g
+
+sudo pm2 start hoge.js したあと自動起動するには
+sudo pm2 startup ubuntu
+sudo pm2 save
+
+//////////////////////////////////////////////
+$ which node
+/home/tato/nvm/versions/node/v10.15.1/bin/node
+$ which pm2
+/home/tato/nvm/versions/node/v10.15.1/bin/pm2
+
+wssをrootで実行するためにリンクを張っておく
+sudo ln -s /home/hoge/nvm/versions/node/v10.15.1/bin/node /usr/bin/node
+sudo ln -s /home/hoge/nvm/versions/node/v10.15.1/bin/pm2 /usr/bin/pm2
+//////////////////////////////////////////////
+g++ or c++ などが不足してることもあるので
+sudo apt install build-essential
+sudo apt install libssl-dev
+
+
+
 ```
