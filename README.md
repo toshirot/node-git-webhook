@@ -1,7 +1,7 @@
 # node-git-webhook
 git-webhook by Node.js
 
-Node.js で gitHub の Webhook を動かして快適なデプロイ生活を送らせて頂いてるのですが、自分だけ快適というのもあれなので、感謝の気持ちを込めて github にパブリックドメインで公開しました。発展途上でもあるので自己責任とバグ報告よろしくということで。
+Node.js で gitHub の Webhook を動かして快適なデプロイ生活を送らせて頂いてるのですが、自分だけ快適というのもあれなので、感謝の気持ちを込めて github にパブリックドメインで公開しました。発展途上でもあるので自己責任とバグ報告 ( https://github.com/toshirot/node-git-webhook/issues ) よろしくということで。
 
 ## 概要
 github リポジトリへのpushなどだけでサーバー側に自動デプロイする。
