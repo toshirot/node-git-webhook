@@ -5,7 +5,14 @@ github リポジトリへのpushなどだけでサーバー側に自動デプロ
 これは、例えば example.netというレポジトリのdev-2fブランチへのpushをすると
 サーバー側の /pathTo/example.net 以下の内容を git からpull して更新する。
 
-1) パス例
+```
+    pathTo/
+      ├── server
+      └── conf.js
+```
+## 設定手順例
+
+1) 対象サーバーのパス例
 ```
     pathTo/
         └── example.net
