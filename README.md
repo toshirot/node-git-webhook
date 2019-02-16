@@ -94,7 +94,7 @@ dev-2f
     User            root
     IdentitiesOnly yes
 ```
-## 対象デプロイサーバー側での起動とデーモン
+#### 対象デプロイサーバー側での起動とデーモン
 
 pm2やforeverなどでgit-hook.jsを起動します。
 
