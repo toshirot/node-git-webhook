@@ -31,6 +31,8 @@ dev-2f
 ```
 #### githubの設定
 
+<img src="https://chatfor.net/img/github-webhook-1.png">
+
 1) github > settings > WebHook の Payload URL に
 ```
 　  https://<HOST名>:<PORT名>
