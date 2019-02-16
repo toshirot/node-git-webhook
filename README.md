@@ -21,7 +21,7 @@ example.net
 #### 対象ブラインチ名
 dev-2f
 
-1) 対象サーバーのパス例
+#### 対象サーバーのパス例
 ```
     pathTo/
         └── example.net
@@ -29,32 +29,36 @@ dev-2f
                 ├── server
                 └── etc..
 ```
-2) github > settings > WebHook の Payload URL に
+#### githubの設定
+
+1) github > settings > WebHook の Payload URL に
 ```
 　  https://<HOST名>:<PORT名>
 ```
-3) github > settings > WebHook の Content type
+2) github > settings > WebHook の Content type
 ```
     application/json
 ```
-4) github > settings > WebHook の Secret
+3) github > settings > WebHook の Secret
 ```
     conf.js に書いたのと同じシークレット
 ```
-5) github > settings > WebHook の SSL verification
+4) github > settings > WebHook の SSL verification
 ```
     今時は、✔️Enable SSL verification  要WebのSSL設定
 ```
-6) github > settings > WebHook の Which events would you like to trigger this webhook?
+5) github > settings > WebHook の Which events would you like to trigger this webhook?
 ```
     このWebhookをトリガーしたいイベントはどれですか？
     ✔️Just the push event.
 ```
-7) github > settings > WebHook の Active
+6) github > settings > WebHook の Active
 ```
     ✔️Active
+    
+#### 対象デプロイサーバー側の設定
 ```
-8) ssh-keygenで秘密鍵、公開鍵を作る
+1) ssh-keygenで秘密鍵、公開鍵を作る
 ```
     sudo ssh-keygen -t rsa -b 4096 -C "Your@e-mail"  -f /root/.ssh/id_rsa_github_example.net
 ```
@@ -70,7 +74,7 @@ dev-2f
     この公開鍵を github settings > Deploy keys へ追加する
 ```
     
-9) プライベートリポジトリの場合は、.ssh/configに鍵のパスを登録しておく
+2) プライベートリポジトリの場合は、.ssh/configに鍵のパスを登録しておく
 ```
     sudo vi /root/.ssh/config
 ```
@@ -90,7 +94,7 @@ dev-2f
     User            root
     IdentitiesOnly yes
 ```
-## 起動とデーモン
+## 対象デプロイサーバー側での起動とデーモン
 
 pm2やforeverなどでgit-hook.jsを起動します。
 
@@ -143,4 +147,4 @@ sudo apt install libssl-dev
 ```
 
 ## License
-Public domain
+#### Public domain
