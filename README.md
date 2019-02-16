@@ -31,8 +31,7 @@ dev-2f
 ```
 #### githubの設定
 
-![GitHub webhook config](https://chatfor.net/img/github-webhook-1.png)
-
+https://chatfor.net/img/github-webhook-1.png
 
 1) github > settings > WebHook の Payload URL に
 ```
