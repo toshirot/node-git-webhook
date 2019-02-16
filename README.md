@@ -1,6 +1,9 @@
 # node-git-webhook
 git-webhook by Node.js
 
+Node.js で gitHub の Webhook を動かして快適なデプロイ生活を送らせて頂いてるのですが、自分だけ快適というのもあれなので、感謝の気持ちを込めて github にパブリックドメインで公開しました。発展途上でもあるので自己責任とバグ報告よろしくということで。
+
+## 概要
 github リポジトリへのpushなどだけでサーバー側に自動デプロイする。
 これは、例えば example.netというレポジトリのdev-2fブランチへのpushをすると
 サーバー側の /pathTo/example.net 以下の内容を git からpull して更新する。
