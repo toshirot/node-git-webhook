@@ -1,10 +1,10 @@
 module.exports={
-    "kabuda.net": {
-        about: "github webhook for kabuda.net",
-        secret: "Your シークレット for kabuda.net"
+    "example.com": {
+        about: "github webhook for example.com",
+        secret: "Your シークレット for example.com"
     },
-    "chatfor.net": {
-        about: "github webhook for chatfor.net",
-        secret: "Your シークレット for chatfor.net"
+    "example.net": {
+        about: "github webhook for example.net",
+        secret: "Your シークレット for example.net"
     }
 }
