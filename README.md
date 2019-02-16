@@ -58,7 +58,8 @@ github リポジトリへのpushなどだけでサーバー側に自動デプロ
     /root/.ssh/id_rsa_github_example.net 秘密鍵
     /root/.ssh/id_rsa_github_example.net.pub　公開鍵
 ```
-    が生成される
+    が生成される　
+    （※https の ssl の鍵に root権限 が必要なので sudo で動かすことを前提にしています。 sudo 以外で動かすときはその部分をそれぞれの権限用に読み替えてください。）
 ```
     この公開鍵を github settings > Deploy keys へ追加する
 ```
@@ -86,7 +87,6 @@ github リポジトリへのpushなどだけでサーバー側に自動デプロ
 ## 起動とデーモン
 
 pm2やforeverなどでgit-hook.jsを起動します。
-sslの鍵にroot権限が必要なので sudo で動かしています。
 
 ```
 sudo pm2 start /pathTo/git-hook.js
