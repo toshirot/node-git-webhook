@@ -57,19 +57,24 @@ dev-2f
     ✔️Active
     
 #### 対象デプロイサーバー側の設定
+
 ```
 1) ssh-keygenで秘密鍵、公開鍵を作る
 ```
     sudo ssh-keygen -t rsa -b 4096 -C "Your@e-mail"  -f /root/.ssh/id_rsa_github_example.net
 ```
+
     これで 
+
 ```
     /root/.ssh/id_rsa_github_example.net 秘密鍵
     /root/.ssh/id_rsa_github_example.net.pub　公開鍵
 ```
+
     が生成される　
     （※ ここでは、 https の ssl の鍵に root権限 が必要なので sudo で動かすことを前提にしています。 
        sudo 以外で動かすときはその部分をそれぞれの権限用に読み替えてください。）
+
 ```
     この公開鍵を github settings > Deploy keys へ追加する
 ```
