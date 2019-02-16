@@ -132,3 +132,6 @@ sudo apt install libssl-dev
 
 
 ```
+
+### license
+Public domain
