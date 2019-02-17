@@ -134,7 +134,7 @@ function chkBranchName(payload){
 }
 
 // ----------------------------------------------------------------------------
-// logの出力
+// for log/ logの出力 ※以下 for log は writeLog を使わなければ不要
 // 
 const writeLog = function (data){
     ifNotExistMkNewFile(logFilePath);
@@ -149,7 +149,7 @@ const writeLog = function (data){
 }
 
 // ----------------------------------------------------------------------------
-// Date関連 for log
+// for log/ Date関連
 // 
 function getTimesInt(str, date){
     /* e.g.
@@ -200,7 +200,7 @@ function getTimesInt(str, date){
   }
 
 // ----------------------------------------------------------------------------
-// logFilePathファイルが存在しなければ作る for log
+// for log/ logFilePathファイルが存在しなければ作る
 // 
 function ifNotExistMkNewFile(file){
     if(!isExistFile(logFilePath)){
@@ -213,7 +213,7 @@ function ifNotExistMkNewFile(file){
 }
 
 // ----------------------------------------------------------------------------
-// ファイルの存在チェック for log
+// for log/ ファイルの存在チェック
 // @return true|false
 // 
 function isExistFile(file) {
