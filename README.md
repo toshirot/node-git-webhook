@@ -145,9 +145,9 @@ sudo pm2 save
 
 //////////////////////////////////////////////
 $ which node
-/home/tato/nvm/versions/node/v10.15.1/bin/node
+/home/hoge/nvm/versions/node/v10.15.1/bin/node
 $ which pm2
-/home/tato/nvm/versions/node/v10.15.1/bin/pm2
+/home/hoge/nvm/versions/node/v10.15.1/bin/pm2
 
 wssをrootで実行するためにリンクを張っておく
 sudo ln -s /home/hoge/nvm/versions/node/v10.15.1/bin/node /usr/bin/node
