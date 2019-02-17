@@ -102,6 +102,13 @@ https://chatfor.net/img/github-webhook-1.png
     IdentitiesOnly yes
 ```
 
+#### 足りないモジュールを読み込んでおく
+
+```
+npm i crypto --save
+```
+暗号関連のメジャーなモジュールです。シークレットのチェックに使っています。
+
 #### 対象デプロイサーバー側での起動とデーモン
 
 pm2やforeverなどでgit-hook.jsを起動します。
