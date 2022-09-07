@@ -1,6 +1,8 @@
 # node-git-webhook
 git-webhook by Node.js
 
+#### ちょっと修正中 2022-09-07
+
 Node.js で gitHub の Webhook を動かして快適なデプロイ生活を送らせて頂いてるのですが、自分だけ快適というのもあれなので、感謝の気持ちを込めて github にパブリックドメインで公開しました。発展途上でもあるので自己責任とバグ報告 ( https://github.com/toshirot/node-git-webhook/issues ) よろしくということで。
 
 ## 概要
@@ -125,6 +127,13 @@ npm i crypto --save
 暗号関連のメジャーなモジュールです。シークレットのチェックに使っています。
 
 #### 対象デプロイサーバー側での起動とデーモン
+
+```
+$ git config --global user.name "xxxx"
+$ git config --global user.email "xxxxxx@gmail.com"
+$ git init
+
+```
 
 pm2やforeverなどでgit-hook.jsを起動します。
 
