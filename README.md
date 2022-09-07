@@ -33,9 +33,23 @@ dev-2f
 
 https://chatfor.net/img/github-webhook-1.png
 
+##### make access tokens
+0)  github > Settings
+![image](https://user-images.githubusercontent.com/154680/188914179-b3aafdf9-9273-4a69-8cbb-c3f7baf50b02.png)
+0)  github > Settings >  Developer settings
+![image](https://user-images.githubusercontent.com/154680/188914522-bddd0fb0-e643-4b84-bca1-f6f908977951.png)
+0)  github > Settings >  Developer settings > Personal access tokens
+![image](https://user-images.githubusercontent.com/154680/188914838-8b4bc4a4-81f7-47c7-92c5-9f444fc60bf5.png)
+0)  github > Settings >  Developer settings > Personal access tokens > Generate new token
+![image](https://user-images.githubusercontent.com/154680/188915091-2dd09db6-0e6b-4a9f-9aad-28ac776e487e.png)
+![image](https://user-images.githubusercontent.com/154680/188915390-3a378051-9ea9-40c6-9699-8cc3e4ddce1f.png)
+
+##### set WebHook
+
 1) github > settings > WebHook の Payload URL に
 ```
 　  https://<HOST名>:<PORT名>
+    e.g. https://example.com:8888
 ```
 2) github > settings > WebHook の Content type
 ```
@@ -43,7 +57,8 @@ https://chatfor.net/img/github-webhook-1.png
 ```
 3) github > settings > WebHook の Secret
 ```
-    conf.js に書いたのと同じシークレット
+     make access tokens で作った Secretトークンを入れる
+     デプロイ側の conf.js にも書く
 ```
 4) github > settings > WebHook の SSL verification
 ```
